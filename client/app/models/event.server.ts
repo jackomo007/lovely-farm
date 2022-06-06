@@ -1,60 +1,26 @@
+const axios = require("axios");
+
 export type Event = {
-    slug: string;
+    _id: string;
     title: string;
-    markdown: string;
+    description: string;
+    date: string;
+    image: string;
+    isFeatured: boolean;
+    location: string;
+    slug: string;
 };
 
 export async function getEvents(): Promise<Array<Event>> {
-    return [
-        {
-            slug: "my-first-post",
-            title: "My First Post",
-            markdown: `
-        # This is my first post
-        
-        Isn't it great?
-            `.trim(),
-        },
-        {
-            slug: "90s-mixtape",
-            title: "A Mixtape I Made Just For You",
-            markdown: `
-        # 90s Mixtape
-        
-        - I wish (Skee-Lo)
-        - This Is How We Do It (Montell Jordan)
-        - Everlong (Foo Fighters)
-        - Ms. Jackson (Outkast)
-        - Interstate Love Song (Stone Temple Pilots)
-        - Killing Me Softly With His Song (Fugees, Ms. Lauryn Hill)
-        - Just a Friend (Biz Markie)
-        - The Man Who Sold The World (Nirvana)
-        - Semi-Charmed Life (Third Eye Blind)
-        - ...Baby One More Time (Britney Spears)
-        - Better Man (Pearl Jam)
-        - It's All Coming Back to Me Now (Céline Dion)
-        - This Kiss (Faith Hill)
-        - Fly Away (Lenny Kravits)
-        - Scar Tissue (Red Hot Chili Peppers)
-        - Santa Monica (Everclear)
-        - C'mon N' Ride it (Quad City DJ's)
-            `.trim(),
-        },
-    ];
+    const events = await axios('http://localhost:8000/event/');
+    return events?.data
 }
 
-export async function getEvent(slug: string) {
-    return {
-        slug: "my-first-post",
-        title: "My First Post",
-        markdown: `
-    # This is my first post
-    
-    Isn't it great?
-        `.trim(),
-    };
+export async function getEvent(id: string) {
+    const event = await axios(`http://localhost:8000/event/${id}`);
+    return event?.data
 }
 
-export async function createEvent( event: any ) {
+export async function createEvent(event: any) {
     return event;
 }

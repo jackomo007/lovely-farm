@@ -14,16 +14,15 @@ export const loader = async () => {
 };
 
 export default function Events() {
-    const { events } = useLoaderData<LoaderData>();
-  console.log(events);
+  const { events } = useLoaderData<LoaderData>();
   return (
     <main>
       <h1>Events</h1>
       <ul>
-        {events.map((event) => (
-          <li key={event.slug}>
+        {events.map((event: any) => (
+          <li key={event._id}>
             <Link
-              to={event.slug}
+              to={event._id}
               className="text-blue-600 underline"
             >
               {event.title}

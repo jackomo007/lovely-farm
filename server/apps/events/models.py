@@ -21,7 +21,7 @@ class EventModel(BaseModel):
                 "date":"2022-05-12",
                 "title":"Programming for everyone",
                 "description":"Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.",
-                "image":"images/coding-event.jpg",
+                "image":"https://next-events-pwa.vercel.app/_next/image?url=%2Fimages%2Fintrovert-event.jpg&w=256&q=75",
                 "isFeatured":"false",
                 "location":"Somestreet 25, 12345 San Somewhereo",
             }
@@ -39,7 +39,7 @@ class UpdateEventModel(BaseModel):
            "example": {
                 "title":"Programming for everyone",
                 "description":"Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.",
-                "image":"images/coding-event.jpg",
+                "image":"https://next-events-pwa.vercel.app/_next/image?url=%2Fimages%2Fintrovert-event.jpg&w=256&q=75",
                 "isFeatured":"false",
                 "location":"Somestreet 25, 12345 San Somewhereo",
             }
