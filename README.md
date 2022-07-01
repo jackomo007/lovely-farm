@@ -11,3 +11,11 @@ Project making CRUD of events using FARM stack
 
 # Swagger
 - Go to http://localhost:8000/docs
+
+# Previews
+
+<img src="https://github.com/jackomo007/lovely-farm/blob/main/client/public/images/home.png" width="500" height="300" alt="home" />
+
+<img src="https://github.com/jackomo007/lovely-farm/blob/main/client/public/images/list.png" width="500" height="300" alt="list" />
+
+<img src="https://github.com/jackomo007/lovely-farm/blob/main/client/public/images/swagger.png" width="500" height="300" alt="swagger" />
