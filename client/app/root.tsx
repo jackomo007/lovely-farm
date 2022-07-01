@@ -15,7 +15,7 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "FARM EVENTS",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -25,8 +25,11 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+        </style>
       </head>
-      <body>
+      <body className="bg-gray-900">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

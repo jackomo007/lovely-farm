@@ -22,15 +22,15 @@ export const loader: LoaderFunction = async ({
 export default function EventSlug() {
     const { event } = useLoaderData<LoaderData>();
     return (
-        <main className="mx-auto max-w-4xl">
-            <h1 className="my-6 border-b-2 text-center text-3xl">
+        <main className="mx-auto max-w-4xl ">
+            <h1 className="my-6 border-b-2 text-center text-3xl text-blue-400" style={{fontFamily: 'Orbitron, sans-serif'}}>
                 {event?.title}
             </h1>
-            <img className="my-6 border-b-2 text-center" src={event?.image} width={100} height={100} />
-            <h2 className="my-6 border-b-2 text-center text-2xl">
+            <img className="my-6 text-center" src={event?.image} width={100} height={100} />
+            <h2 className="my-6 border-b-2 text-center text-2xl text-white">
                 {event?.description}
             </h2>
-            <p className="my-6 border-b-2 text-center text-1xl">
+            <p className="my-6 border-b-2 text-center text-1xl text-green-400">
                 {event?.location}
             </p>
         </main>
